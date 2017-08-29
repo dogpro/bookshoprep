@@ -7,6 +7,20 @@ class Books:
         self.found_book = []
 
 
+    def getCreateBookArgs(self):
+        print("Input Author: ")
+        author = input()
+        print("Input name book: ")
+        name = input()
+        print("Input year of publication: ")
+        year = int(input())
+        if year > 0:
+            return (author, name, year)
+        else:
+            raise ValueError("Year must be positive!")
+
+    def getCreateBookArgsFromFile(self):
+        pass
 
     def createBook(self, author, name, year):
         self.books.append({"id":str(len(self.books)+1), "author":author, "name":name, "year":str(year)})
