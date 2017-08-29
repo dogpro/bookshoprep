@@ -6,7 +6,6 @@ class Books:
         self.books = []
         self.found_book = []
 
-
     def getCreateBookArgs(self):
         print("Input Author: ")
         author = input()
